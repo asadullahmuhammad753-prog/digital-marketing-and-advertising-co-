@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asadullah — Digital Marketing Portfolio</title>
+  <meta name="description" content="Asadullah — Digital marketer specializing in SEO, PPC, social media, content strategy, and growth marketing. Based in Khanewal, Pakistan." />
+  <meta name="author" content="Asadullah" />
+  <meta property="og:title" content="Asadullah — Digital Marketing Portfolio" />
+  <meta property="og:description" content="SEO • PPC • Social • Content • Email • Analytics" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230ea5e9'/%3E%3Ctext x='50' y='62' font-size='60' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'%3EA%3C/text%3E%3C/svg%3E" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Asadullah",
+    "jobTitle": "Digital Marketer",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Basti Zahoorabad, Khanewal",
+      "addressCountry": "PK"
+    },
+    "telephone": "+92 328 901 8784",
+    "email": "mailto:asadullahmuhammad753@gmail.com"
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --panel: #111317;
+      --text: #e5e7eb;
+      --muted: #9aa3af;
+      --brand: #0ea5e9; /* sky-500 */
+      --brand-2: #22d3ee; /* cyan-400 */
+      --ring: 0 0 0 3px rgba(14,165,233,.35);
+    }
+    :root.light {
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #0f172a;
+      --muted: #48566a;
+      --brand: #0ea5e9;
+      --brand-2: #06b6d4;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 80% -10%, rgba(14,165,233,.12), transparent 60%), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container { width: min(1100px, 92%); margin: 0 auto; }
+    .btn {
+      display: inline-flex; align-items: center; gap: .6rem;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: white; padding: .9rem 1.2rem; border-radius: 999px; font-weight: 600;
+      box-shadow: 0 8px 24px rgba(14,165,233,.35);
+      transition: transform .15s ease, box-shadow .15s ease;
+      border: none; cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(14,165,233,.45); }
+    .btn.secondary { background: transparent; color: var(--text); border: 1px solid rgba(148,163,184,.3); box-shadow: none; }
+
+    header {
+      position: sticky; top: 0; z-index: 40; backdrop-filter: saturate(180%) blur(14px);
+      background: color-mix(in oklab, var(--bg) 88%, transparent);
+      border-bottom: 1px solid color-mix(in oklab, var(--text) 14%, transparent);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: .8rem 0; }
+    .brand { display: inline-flex; align-items: center; gap: .6rem; font-weight: 800; letter-spacing: .3px; }
+    .brand .logo { width: 36px; height: 36px; border-radius: 12px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:900; }
+    .nav a { opacity: .92; padding: .5rem .8rem; border-radius: 10px; }
+    .nav a:hover { background: color-mix(in oklab, var(--text) 8%, transparent); }
+    .menu { display: flex; gap: .2rem; }
+    .mobile-toggle { display: none; }
+
+    @media (max-width: 820px) {
+      .menu { display: none; }
+      .mobile-toggle { display: inline-flex; }
+    }
+
+    .hero { padding: 5rem 0 3rem; display: grid; gap: 2rem; grid-template-columns: 1.1fr .9fr; align-items: center; }
+    .badge { display:inline-flex; align-items:center; gap:.4rem; padding:.35rem .6rem; border:1px solid rgba(148,163,184,.25); border-radius:999px; font-size:.85rem; color:var(--muted); }
+    .hero h1 { font-size: clamp(2.2rem, 3.5vw + 1rem, 3.4rem); line-height: 1.1; margin: .4rem 0 1rem; }
+    .hero p { font-size: 1.05rem; color: var(--muted); }
+    .hero-cta { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 1.3rem; }
+    .hero-card { background: linear-gradient(180deg, color-mix(in oklab, var(--panel) 90%, transparent), var(--panel)); border: 1px solid rgba(148,163,184,.18); padding: 1.2rem; border-radius: 18px; box-shadow: 0 10px 30px rgba(2,6,23,.25) inset, 0 20px 50px rgba(0,0,0,.25);
+      display:grid; grid-template-columns: 56px 1fr; gap: 1rem; align-items: center; }
+    .hero-card .icon { width:56px; height:56px; border-radius:14px; background: color-mix(in oklab, var(--text) 8%, transparent); display:flex; align-items:center; justify-content:center; }
+
+    @media (max-width: 920px) { .hero { grid-template-columns: 1fr; padding: 3.6rem 0 2rem; } }
+
+    section { padding: 2.4rem 0; }
+    h2 { font-size: clamp(1.4rem, 1.4vw + .8rem, 2rem); margin: 0 0 1.2rem; }
+
+    .grid-3 { display:grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .grid-2 { display:grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    @media (max-width: 900px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } }
+
+    .card { background: var(--panel); border: 1px solid rgba(148,163,184,.18); border-radius: 18px; padding: 1.1rem; }
+    .card h3 { margin: .2rem 0 .4rem; }
+    .muted { color: var(--muted); }
+    .chip { display:inline-flex; align-items:center; gap:.4rem; padding:.44rem .7rem; background: color-mix(in oklab, var(--text) 8%, transparent); border: 1px solid rgba(148,163,184,.22); border-radius: 999px; font-size:.9rem; }
+    .chips { display:flex; gap:.5rem; flex-wrap:wrap; }
+
+    .case { position: relative; overflow: hidden; }
+    .case .thumb { height: 180px; border-radius: 14px; background: linear-gradient(135deg, color-mix(in oklab, var(--brand) 40%, transparent), color-mix(in oklab, var(--brand-2) 30%, transparent)); display:flex; align-items:center; justify-content:center; }
+    .case .kpi { display:flex; gap: .6rem; flex-wrap:wrap; margin-top: .6rem; }
+    .kpi .pill { padding:.38rem .6rem; border-radius: 999px; background: color-mix(in oklab, var(--text) 8%, transparent); border: 1px solid rgba(148,163,184,.24); font-weight:600; font-size:.9rem; }
+
+    .contact { display:grid; grid-template-columns: 1.2fr .8fr; gap:1rem; }
+    @media (max-width: 920px) { .contact { grid-template-columns: 1fr; } }
+    .contact .info { display:grid; gap:.8rem; }
+    .list { display:grid; gap:.5rem; }
+    .list a, .list div { display:flex; align-items:center; gap:.7rem; padding:.7rem; border:1px solid rgba(148,163,184,.18); border-radius:14px; background: var(--panel); }
+    .list svg { flex: 0 0 22px; }
+
+    footer { border-top: 1px solid rgba(148,163,184,.18); padding: 1.4rem 0 2.2rem; color: var(--muted); }
+
+    .sr-only { position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Go to top">
+        <span class="logo">A</span>
+        <span>Asadullah</span>
+      </a>
+      <nav class="menu" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
+        <a href="#work">Case Studies</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="btn secondary mobile-toggle" aria-label="Open menu" onclick="toggleMenu()">Menu</button>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <span class="badge">🚀 Digital Marketer</span>
+        <h1 id="hero-title">Hi, I’m <span style="color:var(--brand)">Asadullah</span>. I grow brands with data‑driven marketing.</h1>
+        <p>
+          I specialize in SEO, PPC, social media, content strategy, email automation, and analytics. I help businesses turn clicks into loyal customers.
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="#contact">Work with me</a>
+          <a class="btn secondary" href="#work">See results</a>
+          <button class="btn secondary" onclick="toggleTheme()" aria-label="Toggle theme">🌓 Theme</button>
+        </div>
+      </div>
+      <div class="hero-card" role="img" aria-label="Asadullah marketing focus areas">
+        <div class="icon" aria-hidden="true">
+          <!-- Bullseye icon -->
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21a9 9 0 1 0-9-9" stroke="currentColor" stroke-width="1.6"/><path d="M12 17a5 5 0 1 0-5-5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
+        </div>
+        <div>
+          <h3 style="margin:0">Performance Marketing</h3>
+          <p class="muted" style="margin:.2rem 0 0">SEO • Google Ads • Meta Ads • Social • Content • CRO • Email</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="grid-2">
+        <div class="card">
+          <p>
+            I’m Asadullah, a digital marketer based in <strong>Basti Zahoorabad, Khanewal, Pakistan</strong>. I craft full‑funnel strategies—from awareness to conversion—so your brand scales efficiently.
+          </p>
+          <div class="chips" aria-label="Highlights">
+            <span class="chip">Data‑driven</span>
+            <span class="chip">Creative campaigns</span>
+            <span class="chip">ROI‑focused</span>
+            <span class="chip">End‑to‑end funnels</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Quick Stats</h3>
+          <ul class="muted" style="margin: .2rem 0 0; padding-left: 1rem;">
+            <li>Scaled organic traffic +150% in 6 months for SMBs</li>
+            <li>3× average ROAS on paid campaigns</li>
+            <li>200% engagement growth for local brands</li>
+            <li>50+ qualified leads/month via content + email</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>SEO</h3>
+          <p class="muted">Technical, On‑page, Off‑page, Keyword research, Site architecture.</p>
+        </div>
+        <div class="card">
+          <h3>PPC & Paid Social</h3>
+          <p class="muted">Google Ads, Meta Ads, Audience building, Retargeting, ROAS optimization.</p>
+        </div>
+        <div class="card">
+          <h3>Content & Email</h3>
+          <p class="muted">Content strategy, Copywriting, Email automation, Lead nurturing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Services</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>SEO Growth</h3>
+          <p class="muted">Site audits, technical fixes, content plans, authority building.</p>
+        </div>
+        <div class="card">
+          <h3>Paid Ads</h3>
+          <p class="muted">Full‑funnel campaigns across Google, Facebook & Instagram.</p>
+        </div>
+        <div class="card">
+          <h3>Social & Branding</h3>
+          <p class="muted">Social media strategy, calendars, creatives, community management.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2>Case Studies</h2>
+      <div class="grid-3">
+        <article class="card case">
+          <div class="thumb" aria-hidden="true">
+            <!-- Placeholder graphic -->
+            <svg width="100%" height="100%" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="300" height="180" rx="14" fill="rgba(255,255,255,.06)" />
+              <path d="M20 140 L90 90 L140 120 L230 60 L280 80" stroke="white" opacity=".5" stroke-width="3" fill="none"/>
+            </svg>
+          </div>
+          <h3>E‑commerce SEO + Ads</h3>
+          <p class="muted">Ranked 20+ keywords on page one and scaled sales with targeted Google Ads.</p>
+          <div class="kpi">
+            <span class="pill">+300% Sales</span>
+            <span class="pill">+150% Organic</span>
+            <span class="pill">ROAS 3×</span>
+          </div>
+        </article>
+        <article class="card case">
+          <div class="thumb" aria-hidden="true">
+            <svg width="100%" height="100%" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="300" height="180" rx="14" fill="rgba(255,255,255,.06)" />
+              <circle cx="80" cy="90" r="50" stroke="white" opacity=".4" stroke-width="3" fill="none"/>
+              <circle cx="200" cy="90" r="50" stroke="white" opacity=".2" stroke-width="3" fill="none"/>
+            </svg>
+          </div>
+          <h3>Local Brand — Social Growth</h3>
+          <p class="muted">Built engaging campaigns and doubled inbound inquiries.</p>
+          <div class="kpi">
+            <span class="pill">+200% Engagement</span>
+            <span class="pill">4× Followers</span>
+          </div>
+        </article>
+        <article class="card case">
+          <div class="thumb" aria-hidden="true">
+            <svg width="100%" height="100%" viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="300" height="180" rx="14" fill="rgba(255,255,255,.06)" />
+              <path d="M30 150 L60 110 L120 120 L160 80 L230 90 L270 40" stroke="white" opacity=".4" stroke-width="3" fill="none"/>
+            </svg>
+          </div>
+          <h3>Lead Gen — Email Automation</h3>
+          <p class="muted">Captured & nurtured leads with targeted content and drip sequences.</p>
+          <div class="kpi">
+            <span class="pill">500+ Leads</span>
+            <span class="pill">CVR +2.1×</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact">
+        <div class="card info">
+          <div class="list" role="list">
+            <a role="listitem" href="tel:+923289018784" aria-label="Call Asadullah">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5c0-1.1.9-2 2-2h2c.9 0 1.7.6 1.9 1.5l.7 2.6c.2.9-.1 1.9-.9 2.4l-1 0.7a13.9 13.9 0 0 0 6 6l.7-1c.6-.8 1.6-1.1 2.5-.9l2.5.7c.9.2 1.5 1 1.5 1.9v2c0 1.1-.9 2-2 2h-1C9.2 21 3 14.8 3 7V5Z" stroke="currentColor" stroke-width="1.6"/></svg>
+              <div>
+                <div style="font-weight:600">Call</div>
+                <div class="muted">+92 328 901 8784</div>
+              </div>
+            </a>
+            <a role="listitem" href="mailto:asadullahmuhammad753@gmail.com" aria-label="Email Asadullah">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.6"/><path d="m4 8 8 6 8-6" stroke="currentColor" stroke-width="1.6"/></svg>
+              <div>
+                <div style="font-weight:600">Email</div>
+                <div class="muted">asadullahmuhammad753@gmail.com</div>
+              </div>
+            </a>
+            <a role="listitem" href="https://wa.me/923289018784" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke="currentColor" stroke-width="1.6"/><path d="M7.5 19 5 21l.8-3.2" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 8.5c.6-1 1.8-1 2.4 0l.4.7c.2.3.1.7-.2 1l-.6.6a.9.9 0 0 0 0 1.3l1 1a.9.9 0 0 0 1.3 0l.6-.6c.3-.3.7-.3 1 0l.7.4c1 .6 1 1.8 0 2.4l-.5.3A5.7 5.7 0 0 1 8.2 9l.3-.5Z" stroke="currentColor" stroke-width="1.6"/></svg>
+              <div>
+                <div style="font-weight:600">WhatsApp</div>
+                <div class="muted">Message me directly</div>
+              </div>
+            </a>
+            <div role="listitem">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 10.5 12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9.5Z" stroke="currentColor" stroke-width="1.6"/></svg>
+              <div>
+                <div style="font-weight:600">Address</div>
+                <div class="muted">Basti Zahoorabad, Khanewal, Pakistan</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Send a quick message</h3>
+          <form onsubmit="return mailtoSubmit(event)" aria-label="Quick contact form">
+            <label class="sr-only" for="name">Name</label>
+            <input id="name" name="name" placeholder="Your Name" required style="width:100%; padding: .9rem 1rem; border-radius:12px; border:1px solid rgba(148,163,184,.28); background:var(--panel); color:var(--text); margin-bottom:.6rem" />
+
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="Your Email" required style="width:100%; padding: .9rem 1rem; border-radius:12px; border:1px solid rgba(148,163,184,.28); background:var(--panel); color:var(--text); margin-bottom:.6rem" />
+
+            <label class="sr-only" for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell me about your goals…" required style="width:100%; padding: .9rem 1rem; border-radius:12px; border:1px solid rgba(148,163,184,.28); background:var(--panel); color:var(--text); margin-bottom:.8rem"></textarea>
+
+            <button class="btn" type="submit">Send Email</button>
+            <p class="muted" style="margin:.6rem 0 0; font-size:.9rem">This opens your email app with a pre‑filled message.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:.6rem; flex-wrap:wrap;">
+        <div>© <span id="year"></span> Asadullah. All rights reserved.</div>
+        <div class="muted">SEO • PPC • Social • Content • Email • Analytics</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu (simple scroll to sections via prompt)
+    function toggleMenu() {
+      const links = [
+        {label: 'About', href: '#about'},
+        {label: 'Skills', href: '#skills'},
+        {label: 'Services', href: '#services'},
+        {label: 'Case Studies', href: '#work'},
+        {label: 'Contact', href: '#contact'}
+      ];
+      const choice = prompt('Go to: About, Skills, Services, Case Studies, Contact');
+      if (!choice) return;
+      const match = links.find(l => l.label.toLowerCase().startsWith(choice.toLowerCase()));
+      if (match) location.hash = match.href;
+    }
+
+    // Theme toggle (persist in localStorage)
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') root.classList.add('light');
+    function toggleTheme(){
+      root.classList.toggle('light');
+      localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark');
+    }
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mailto form submit
+    function mailtoSubmit(e){
+      e.preventDefault();
+      const name = encodeURIComponent(e.target.name.value.trim());
+      const from = encodeURIComponent(e.target.email.value.trim());
+      const msg = encodeURIComponent(e.target.message.value.trim());
+      const subject = `New inquiry from ${name}`;
+      const body = `Name: ${name}%0D%0AEmail: ${from}%0D%0A%0D%0AMessage:%0D%0A${msg}`;
+      const mail = `mailto:asadullahmuhammad753@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = mail;
+      return false;
+    }
+
+    // Accessibility: smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) { e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+  </script>
+</body>
+</html>
